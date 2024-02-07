@@ -2,6 +2,10 @@ const express = require("express")
 const mongoose = require('mongoose')
 const cors = require('cors')
 const SignupModel = require('./models/signup')
+const StudyMaterialModel = require('./models/StudyMaterialSchema')
+const ProjectModel = require('./models/ProjectSchema')
+const CareerModel = require('./models/careerSchema')
+const PostModel = require('./models/postSchema')
 const Token = require('./models/token')
 const crypto = require("crypto")
 const verify = require('./utils')
@@ -11,6 +15,7 @@ require("dotenv").config();
 const app = express()
 app.use(express.json())
 app.use(cors())
+
 
 mongoose.connect(process.env.MONGODB_URL)
 
@@ -75,6 +80,40 @@ app.post("/login" , (req, res) =>{
         }
     })
 
+})
+
+app.post('/studyMaterial',  (req, res)=>{
+
+    StudyMaterialModel.create(req.body)
+    .then(studyMaterial=> res.json(studyMaterial))
+    .catch(err => res.status(400).send(err));
+    
+})
+
+app.post('/careers',  (req, res)=>{
+
+    CareerModel.create(req.body)
+    .then(careers=> res.json(careers))
+    .catch(err => res.status(400).send(err));
+    
+})
+
+app.post('/project',  (req, res)=>{
+
+    ProjectModel.create(req.body)
+    .then(projects=> res.json(projects))
+    .catch(err => res.status(400).send(err));
+    
+})
+
+
+
+app.post('/posts',  (req, res)=>{
+
+    PostModel.create(req.body)
+    .then(posts=> res.json(posts))
+    .catch(err => res.status(400).send(err));
+    
 })
 
 
