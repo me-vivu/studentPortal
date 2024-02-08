@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#title,
+#description,
+#tag,
+#author_name,
+
+#report,
+#file {
+margin-top: 5px;
+}
+
+#submit_button {
+    width:auto;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit_button:hover {
+background-color: #45a049;
+}

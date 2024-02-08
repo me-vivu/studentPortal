@@ -5,6 +5,7 @@ import Login from './login'
 import Home from './home/home'
 import OtpVerify from './auth/otpVerify'
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
+import Career from './career/career'
 
 function App() {
   
@@ -19,6 +20,8 @@ function App() {
         <Route path='/verification' element={<OtpVerify/>}></Route>
         <Route path='/studyMaterial' element={<StudyMaterial/>}></Route>
         <Route path='/projects' element={<Project/>}></Route>
+        <Route path='/post' element={<Post/>}></Route>
+        <Route path='/career' element={<Career/>}></Route>
 
       </Routes>
     
