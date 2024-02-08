@@ -4,6 +4,7 @@ import Signup from './signup'
 import Login from './login'
 import Home from './home'
 import StudyMaterial from './studyMaterial/studyMaterial'
+import Project from './projects/project'
 import OtpVerify from './auth/otpVerify'
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/verification' element={<OtpVerify/>}></Route>
         <Route path='/studyMaterial' element={<StudyMaterial/>}></Route>
+        <Route path='/projects' element={<Project/>}></Route>
 
       </Routes>
     

@@ -57,6 +57,7 @@ function otpVerify(){
         <div id="otpContainer">
             <h2>OTP Verification</h2>
             <form onSubmit={verify}>
+                
                 <input className="otpInput" type="text" maxLength="1" required onChange={handleChange}/>
                 <input className="otpInput" type="text" maxLength="1" required onChange={handleChange}/>
                 <input className="otpInput" type="text" maxLength="1" required onChange={handleChange}/>

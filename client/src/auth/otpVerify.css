@@ -8,7 +8,7 @@ body {
 }
 
 #otpContainer {
-    text-align: center;
+    align-items: center;
 }
 
 .otpInput {
