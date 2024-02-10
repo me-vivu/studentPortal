@@ -1,0 +1,71 @@
+.divContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-btn{
+    display: flex;
+    width: 200px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+.nav-btn:hover{
+
+    color: white;
+    background-color: rgb(156, 156, 192);
+}
+
+.nav-btn:hover img{
+
+    
+    filter: invert(100%);
+}
+
+.nav-btn:active{
+
+    color: white;
+    background-color: rgb(156, 156, 192);
+}
+
+.btn-img{
+    width: 18px;
+    margin-right: 10px
+    
+}
+
+.profileImg{
+    width: 100px;
+    margin-bottom: 10px;
+    
+}
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.textName{
+    font-size: 16px;
+    font-weight: bold;
+    align-items:center
+}
+
+.tag{
+    font-family:sans-serif ;
+    color: grey;
+
+}
+
