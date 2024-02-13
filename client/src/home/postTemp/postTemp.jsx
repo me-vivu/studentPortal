@@ -39,7 +39,7 @@ function PostTemp(){
 
             <div className="img-container">
                 <img src={profileImg} alt="image" className="disp-img" />
-                <img src={profileImg} alt="image" className="disp-img" />
+                
             </div>
             <div className="action-btns">
                 <button id= "like-btn" className="like-btn">
