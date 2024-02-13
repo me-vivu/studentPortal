@@ -3,6 +3,7 @@ import profileImg from '../../assets/img.jpg'
 import hamImg from "../../assets/ham.png"
 import like from "../../assets/like.png";
 import comment from "../../assets/comment.png"
+import car from "../../assets/car01.jpg"
 import './postTemp.css'
 
 function PostTemp(){
@@ -33,12 +34,12 @@ function PostTemp(){
 
             <div>
                 <p className="msg-text">
-                    Hello world this is really a beautiful timee to work 
+                    Such a beautiful car ❤️✌️ 
                 </p>
             </div>
 
             <div className="img-container">
-                <img src={profileImg} alt="image" className="disp-img" />
+                <img src={car} alt="image" className="disp-img" />
                 
             </div>
             <div className="action-btns">
