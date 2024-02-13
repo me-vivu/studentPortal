@@ -26,20 +26,22 @@ function Login(){
     }
 
     return(
-        <div className="login-container">
-            <h2>Login✌️</h2>
-            <form onSubmit={handleSubmit}>
-                
-                <label htmlFor="username" >Username:</label>
-                <input type="text" id="username" name="username" onChange={(e)=> setEmailId(e.target.value)} required/>
-                
-                <br/>
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" onChange={(e)=> setPassword(e.target.value)} required/>
-                
+        <div className='login-main'>
+            <div className="login-container">
+                <h2>Login✌️</h2>
+                <form onSubmit={handleSubmit}>
+                    
+                    <label htmlFor="username" >Username:</label>
+                    <input type="text" id="username" name="username" onChange={(e)=> setEmailId(e.target.value)} required/>
+                    
+                    <br/>
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" id="password" name="password" onChange={(e)=> setPassword(e.target.value)} required/>
+                    
 
-                <button type="submit">Login</button>
-            </form>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
         </div>
     )
 

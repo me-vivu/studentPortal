@@ -6,6 +6,7 @@ import Home from './home/home'
 import StudyMaterial from './studyMaterial/studyMaterial.jsx'
 import Project from './projects/project.jsx'
 import OtpVerify from './auth/otpVerify'
+import Post from './post/post.jsx'
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
 import Career from './career/career'
 

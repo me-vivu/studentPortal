@@ -1,0 +1,23 @@
+.descContainer{
+    display: flex;
+    width: auto;
+    height: 60px;
+    padding: 5px;
+    margin-left: 0px;
+    overflow: hidden; 
+    word-wrap: break-word;
+    background-color: rgb(233, 244, 244);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    align-items: center;
+    
+    
+}
+
+.descText{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+
+}

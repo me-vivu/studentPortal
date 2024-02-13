@@ -1,16 +1,16 @@
-import { Button } from 'bootstrap'
 import React from 'react'
-import homeImg from 'D:/6th semester/studentPortal/client/src/assets/home.png'
-import careerImg from 'D:/6th semester/studentPortal/client/src/assets/career.png'
-import discImg from 'D:/6th semester/studentPortal/client/src/assets/discussion.png'
-import notesImg from 'D:/6th semester/studentPortal/client/src/assets/notes.png'
-import profileImg from 'D:/6th semester/studentPortal/client/src/assets/profile.png'
+import homeImg from '../../assets/home.png'
+import careerImg from '../../assets/career.png'
+import discImg from '../../assets/discussion.png'
+import notesImg from '../../assets/notes.png'
+import profileImg from '../../assets/profile.png'
+import projectImg from '../../assets/project.png'
 import './nav.css'
 
 
 function Navigation(){
     return(
-        <div>
+        <div className='navigation-cnt'>
 
             <div className='profile-container'>
                 <img src={profileImg} alt='Profile Image' className ="profileImg"></img>
@@ -33,6 +33,11 @@ function Navigation(){
                 <button className='nav-btn'> 
                     <img src = {discImg} className = "btn-img"/>
                     Discussion
+                </button>
+
+                <button className='nav-btn'> 
+                    <img src = {projectImg} className = "btn-img"/>
+                    Projects
                 </button>
 
                 <button className='nav-btn'> 
