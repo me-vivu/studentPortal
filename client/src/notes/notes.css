@@ -1,0 +1,31 @@
+
+
+.container{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(203, 30, 30);
+    
+}
+.branch{
+    width: 500px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(184, 17, 17);
+}
+.note{
+    width: 500px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(55, 212, 139);
+    
+}   
+
+.subjects{
+    display: grid;
+}
+
+
+
