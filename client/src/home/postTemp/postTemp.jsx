@@ -1,6 +1,6 @@
 import React from "react";
 import profileImg from '../../assets/img.jpg'
-import hamImg from "../../assets/ham.png"
+import hamImg from "../../assets/dots.png"
 import like from "../../assets/like.png";
 import comment from "../../assets/comment.png"
 import car from "../../assets/car01.jpg"

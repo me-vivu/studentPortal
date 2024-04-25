@@ -1,10 +1,8 @@
 .home-screen{
     display:flex;
-    /* width: 2500px; */
-    flex-direction: row;
-    overflow-x: auto;
-    
 }
+
+
 
 .post-display{
     display: flex;
@@ -15,6 +13,8 @@
     border-radius: 8px;
     margin: 10px;
     margin-top: 20px;
+    overflow-y: auto;
+    
 
 }
 

@@ -3,6 +3,7 @@ import Navigation from './navigation/nav';
 import Forums from './discussion/forums';
 import ShareNow from './share/share';
 import PostTemp from './postTemp/postTemp';
+import ProjectPage from '../projects/project-page';
 import './home.css'
 
 function Home() {
@@ -13,16 +14,18 @@ function Home() {
             <Navigation/>
            </div>
             
+
             
+            
+
+            {/* Home page is built from here */}
 
             <div className='post-display'>
                 <ShareNow/>
                 <PostTemp/>
                 <PostTemp/>
                 <PostTemp/>
-                
-                
-                
+                               
              
             </div>
             
