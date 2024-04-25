@@ -1,139 +1,62 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+.home-screen{
+    display:flex;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
+
+
+.post-display{
     display: flex;
-    flex-wrap: wrap;
-}
-
-.header {
-    background-color: #f0f0f0;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    flex: 1;
-}
-
-.nav {
     flex: 3;
-    text-align: center;
-}
-
-.nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #333;
-}
-
-.main {
-    display: flex;
-    flex: 1;
-}
-
-.sidebar {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-.profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #333;
-}
-
-.download {
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    margin: 10px;
     margin-top: 20px;
+    overflow-y: auto;
+    
+
 }
 
-.content {
-    flex: 3;
-    padding: 20px;
-}
-
-.post {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.user {
+.others-display{
+    flex: 1;
+    height: 100vh;
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    
 }
 
-.user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+.nav{
+    
+    flex: 1;
+    align-self: flex-start;
+    height: 100vh;
+    width: 100%;
 }
 
-.user h2 {
-    margin: 0;
-    font-size: 18px;
+.text{
+    font-weight: bold;
+    
 }
 
-.user span {
-    color: #888;
-    font-size: 14px;
-    margin-left: auto;
+.disc-btn{
+    height: 35px;
+    padding: 0px;
+    border-radius: 8px;
+    background-color: rgb(108, 151, 243);
+    font-weight: bold;
 }
 
-.text p {
-    margin: 0;
-    color: #333;
+.disc-btn:hover{
+    color: white;
+    background-color: rgb(156, 156, 192);
 }
 
-.actions {
-    margin-top: 10px;
-}
-
-.actions button {
-    margin-right: 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-}
-
-.actions button:hover {
-    background-color: #0056b3;
+.upload-sec{
+    
+    width: 100%;
+    margin-top: 40px;
+    flex-direction: column;
 }

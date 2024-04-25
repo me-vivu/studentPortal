@@ -1,0 +1,36 @@
+.share-container{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    background-color: rgb(239, 242, 244);
+    padding: 10px;
+    justify-content: center;
+    border-radius: 8px;
+    width: 80%;
+
+}
+
+.share-cont{
+    width: auto;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.share-elem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dis-img{
+    height: 40px;
+    width: 40px;
+    margin: 7px;
+}
+
+.post-btn{
+    width: 150px;
+    border-radius: 8px;
+    background-color: rgb(76, 130, 178);
+    margin: 7px;
+}

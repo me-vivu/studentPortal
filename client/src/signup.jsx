@@ -26,27 +26,29 @@ function Signup() {
 
 
     return(
-        <div className="register-container">
-        <h2>Register</h2>
+        <div className="signup-main">
+            <div className="register-container">
+                <h2>Register</h2>
 
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName"  onChange={(e) => setfName(e.target.value)} required />
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName"  onChange={(e) => setfName(e.target.value)} required />
 
-            <label htmlFor="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" onChange={(e) => setlName(e.target.value)} required />
+                    <label htmlFor="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" onChange={(e) => setlName(e.target.value)} required />
 
-            <label htmlFor="emailId">Email:</label>
-            <input type="email" id="emailId" name="emailId" onChange={(e) => setEmail(e.target.value)} required />
+                    <label htmlFor="emailId">Email:</label>
+                    <input type="email" id="emailId" name="emailId" onChange={(e) => setEmail(e.target.value)} required />
 
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)} required />
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)} required />
 
 
-            <button type="submit">Register</button>
-        </form>
-        
+                    <button type="submit">Register</button>
+                </form>
+            
 
+            </div>
         </div>
     )
 

@@ -1,0 +1,12 @@
+.project-view{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    padding: 20;
+}

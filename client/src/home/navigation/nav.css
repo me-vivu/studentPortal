@@ -1,13 +1,26 @@
 .divContainer{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0px;
     margin: 0px;
+    width: 100%;
+    
+}
+
+.navigation-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    align-self: flex-start;
+    padding: 15px;
 }
 
 .nav-btn{
     display: flex;
-    width: 200px;
+    width: 100%;
     color: black;
     background-color: white;
     border-radius: 15px;

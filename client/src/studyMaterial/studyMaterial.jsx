@@ -3,7 +3,7 @@ import './studyMaterial.css'
 
 function StudyMaterial() {
     return (
-        <div>
+        <div className='studyMat-main'>
             <h2>Study Material</h2>
             <form className='studyMat'>
                 <div>

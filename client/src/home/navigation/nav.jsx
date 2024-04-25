@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 
 import React from 'react'
 
+=======
+import React from 'react'
+>>>>>>> 0c0b78b7a8a2523b3b33335ce7586ed80845e19f
 import homeImg from '../../assets/home.png'
 import careerImg from '../../assets/career.png'
 import discImg from '../../assets/discussion.png'
 import notesImg from '../../assets/notes.png'
 import profileImg from '../../assets/profile.png'
+<<<<<<< HEAD
+=======
+import projectImg from '../../assets/project.png'
+>>>>>>> 0c0b78b7a8a2523b3b33335ce7586ed80845e19f
 import './nav.css'
 
 
@@ -13,7 +21,7 @@ import './nav.css'
 
 function Navigation(){
     return(
-        <div>
+        <div className='navigation-cnt'>
 
             <div className='profile-container'>
                 <img src={profileImg} alt='Profile Image' className ="profileImg"></img>
@@ -36,6 +44,11 @@ function Navigation(){
                 <button className='nav-btn'> 
                     <img src = {discImg} className = "btn-img"/>
                     Discussion
+                </button>
+
+                <button className='nav-btn'> 
+                    <img src = {projectImg} className = "btn-img"/>
+                    Projects
                 </button>
 
                 <button className='nav-btn'> 
