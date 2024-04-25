@@ -4,7 +4,7 @@ import Navigation from './navigation/nav';
 function Home() {
     return (
         <div>
-           
+        
             <Navigation/>
             
         </div>

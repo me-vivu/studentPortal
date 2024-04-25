@@ -9,6 +9,7 @@ const PostModel = require('./models/postSchema')
 const Token = require('./models/token')
 const crypto = require("crypto")
 const verify = require('./utils')
+const notes=require('./api/notes')
 require("dotenv").config();
 
 
@@ -18,6 +19,24 @@ app.use(cors())
 
 
 mongoose.connect(process.env.MONGODB_URL)
+
+app.use(notes)
+
+
+app.get('/get-data/:branch/:semester', async (req, res) => {
+
+    const{branch, semester} = req.params;
+    
+    try {
+        // Query database based on selected branch and semester
+        const data = await StudyMaterialModel.find({ branch, semester });
+        console.log(data)
+        res.json(data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
 
 app.post('/register',  (req, res)=>{
 
