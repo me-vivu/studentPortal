@@ -11,6 +11,7 @@ import ProjectPage from './projects/project-page.jsx'
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
 import Career from './career/career-page.jsx'
 import CareerForm from './career/career.jsx';
+import Post from "./post/post.jsx"
 import Notes from './notes/notes.jsx'
 
 
