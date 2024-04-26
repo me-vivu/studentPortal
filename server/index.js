@@ -7,11 +7,25 @@ const ProjectModel = require('./models/ProjectSchema')
 const CareerModel = require('./models/careerSchema')
 const PostModel = require('./models/postSchema')
 const Token = require('./models/token')
+<<<<<<< HEAD
+=======
 const crypto = require("crypto")
 const verify = require('./utils')
 const notes=require('./api/notes')
 require("dotenv").config();
+>>>>>>> f1fa69080e1fccfbb780af5b14ba94d9f6ab48c1
 
+const PostRouter = require("./api/post");
+const UserRouter = require("./api/userName");
+
+const crypto = require("crypto");
+const verify = require('./utils');
+
+const { google } = require('googleapis');
+const Multer = require('multer');
+const fs = require('fs');
+
+require("dotenv").config();
 
 const app = express()
 app.use(express.json())
@@ -82,6 +96,8 @@ app.post('/verify', (req, res) =>{
 
 
 
+
+
 app.post("/login" , (req, res) =>{
 
     const {emailId, password} = req.body;
@@ -127,15 +143,93 @@ app.post('/project',  (req, res)=>{
 
 
 
-app.post('/posts',  (req, res)=>{
+app.use(PostRouter);
+app.use(UserRouter);
 
-    PostModel.create(req.body)
-    .then(posts=> res.json(posts))
-    .catch(err => res.status(400).send(err));
-    
-})
+const multer = Multer({
+    storage: Multer.diskStorage({
+      destination: function (req, file, callback) {
+        
+        let destinationFolder;
+        
+        if (req.folder) {
+            console.log(req.folder)
+            destinationFolder = req.folder; // Get destination folder from request body
+        } else {
+            destinationFolder = ''; // Default folder if not specified in request
+        }
+        callback(null, `${__dirname}/${destinationFolder}`);
+      },
+      filename: function (req, file, callback) {
+        callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+      },
+    }),
+    limits: {
+      fileSize: 5 * 1024 * 1024, // 5 MB
+    },
+});
+  
+const authenticateGoogle = () => {
+    const auth = new google.auth.GoogleAuth({
+        keyFile: './service-account.json',
+        scopes: "https://www.googleapis.com/auth/drive",
+    });
+    return auth;
+};
+
+  
+const uploadToGoogleDrive = async (file, auth) => {
+    const fileMetadata = {
+        name: file.originalname,
+        parents: ["1qNOgx-TVbgIVVEkW7Qe3Aqz4kt44kcZ_"], 
+};
+  
+const media = {
+    mimeType: file.mimetype,
+    body: fs.createReadStream(file.path),
+};
+
+const driveService = google.drive({ version: "v3", auth });
+  
+const response = await driveService.files.create({
+        requestBody: fileMetadata,
+        media: media,
+        fields: "id",
+    });
+    return response.data.id;
+};
+  
+const deleteFile = (filePath) => {
+    fs.unlink(filePath, (err) => {
+        if (err) {
+        console.error("Error deleting file:", err);
+        } else {
+        console.log("File deleted");
+        }
+    });
+};
+  
+app.post("/uploadData", multer.single("file"), async (req, res, next) => {
+    try {
+
+        
+        if (!req.file) {
+            res.status(400).send("No file uploaded.");
+            return;
+        }
+
+        const auth = authenticateGoogle();
+        const fileId = await uploadToGoogleDrive(req.file, auth);
+        deleteFile(req.file.path);
+        res.status(200).json({ fileId });
+
+    } catch (err) {
+        console.error("Error uploading file:", err);
+        res.status(500).send("Internal server error");
+    }
+});
 
 
-app.listen(3001, ()=>{
-    console.log("Server is running on port 3001")
+app.listen(5001, ()=>{
+    console.log("Server is running on port 5001")
 })

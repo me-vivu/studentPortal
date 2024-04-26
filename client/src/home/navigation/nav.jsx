@@ -1,6 +1,4 @@
-
 import React from 'react'
-
 import homeImg from '../../assets/home.png'
 import careerImg from '../../assets/career.png'
 import discImg from '../../assets/discussion.png'
@@ -13,6 +11,11 @@ import './nav.css'
 
 
 function Navigation(){
+
+
+
+
+
     return(
         <div className='navigation-cnt'>
 

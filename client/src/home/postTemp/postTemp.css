@@ -1,11 +1,18 @@
 .post-temp{
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-direction: column;
     background-color: rgb(239, 242, 244);
     padding: 12px;
     border-radius: 8px;
     margin-top: 15px;
+}
+
+.post-view{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+
 }
 
 .info-sec{
