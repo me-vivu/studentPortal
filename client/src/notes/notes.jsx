@@ -15,7 +15,7 @@ function Notes() {
     console.log("Here:",branchList);
     if(branch && semester){
 
-      axios.get('http://localhost:3001/get-data/'+ branch +'/' + semester) // Corrected URL
+      axios.get('http://localhost:5001/get-data/'+ branch +'/' + semester) // Corrected URL
       .then(response => {
         console.log(response.data)
         setBranchList(response.data);
