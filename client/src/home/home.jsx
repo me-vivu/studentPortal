@@ -23,8 +23,7 @@ function Home() {
             <div className='post-display'>
                 <ShareNow/>
                 <PostTemp/>
-                <PostTemp/>
-                <PostTemp/>
+                
                                
              
             </div>
