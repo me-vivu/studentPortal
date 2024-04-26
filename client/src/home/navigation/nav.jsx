@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 
 import React from 'react'
 
-=======
-import React from 'react'
->>>>>>> 0c0b78b7a8a2523b3b33335ce7586ed80845e19f
 import homeImg from '../../assets/home.png'
 import careerImg from '../../assets/career.png'
 import discImg from '../../assets/discussion.png'
 import notesImg from '../../assets/notes.png'
 import profileImg from '../../assets/profile.png'
-<<<<<<< HEAD
-=======
 import projectImg from '../../assets/project.png'
->>>>>>> 0c0b78b7a8a2523b3b33335ce7586ed80845e19f
 import './nav.css'
 
 
@@ -32,18 +25,19 @@ function Navigation(){
             <div className = "divContainer">
                 
                 <button className='nav-btn'> 
-                    <img src = {homeImg} className = "btn-img"/>
-                    Home 
+                <a href="./home-page"><img src = {homeImg} className = "btn-img"/>
+                    Home </a>
+                    
                 </button>
 
                 <button className='nav-btn'> 
-                    <img src = {careerImg} className = "btn-img"/>
-                    Career 
+                    <a href="./careerpage"><img src = {careerImg} className = "btn-img"/>
+                    Career </a>
                 </button>
 
                 <button className='nav-btn'> 
-                    <img src = {discImg} className = "btn-img"/>
-                    Discussion
+                    <a href="./discussion"><img src = {discImg} className = "btn-img"/>
+                    Discussion</a>
                 </button>
 
                 <button className='nav-btn'> 
@@ -52,8 +46,9 @@ function Navigation(){
                 </button>
 
                 <button className='nav-btn'> 
-                    <img src = {notesImg} className = "btn-img"/>
-                    Notes 
+                <a href="./notes" className='note' id='note'><img src = {notesImg} className = "btn-img"/>
+                    Notes </a>
+                    
                 </button>
 
             </div>

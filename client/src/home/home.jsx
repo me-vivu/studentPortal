@@ -9,10 +9,10 @@ import './home.css'
 function Home() {
     return (
         <div className='home-screen'>
-           
-           <div className='nav'>
+        
+        <div className='nav'>
             <Navigation/>
-           </div>
+        </div>
             
 
             
@@ -25,8 +25,7 @@ function Home() {
                 <PostTemp/>
                 <PostTemp/>
                 <PostTemp/>
-                               
-             
+                            
             </div>
             
 

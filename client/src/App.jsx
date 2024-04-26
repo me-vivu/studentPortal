@@ -7,12 +7,13 @@ import StudyMaterial from './studyMaterial/studyMaterial.jsx'
 import Project from './projects/project.jsx'
 import Post from './post/post.jsx'
 import OtpVerify from './auth/otpVerify'
-import Post from './post/post.jsx'
+
 import ProjectPage from './projects/project-page.jsx'
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
 import Career from './career/career'
 import Notes from './notes/notes.jsx'
-
+import Discussion from './disscusion/discussion.jsx'
+import Careerpage from './career-page/career-page'
 function App() {
   
 
@@ -29,7 +30,9 @@ function App() {
         <Route path='/post' element={<Post/>}></Route>
         <Route path='/career' element={<Career/>}></Route>
         <Route path='/project-view' element={<ProjectPage/>}></Route>
-
+        <Route path='/notes' element={<Notes/>}></Route>
+        <Route path="/discussion" element={<Discussion />} />
+        <Route path="/careerpage" element={<Careerpage/>}/>
       </Routes>
     
     </BrowserRouter>
