@@ -5,6 +5,7 @@ import discImg from '../../assets/discussion.png'
 import notesImg from '../../assets/notes.png'
 import profileImg from '../../assets/profile.png'
 import projectImg from '../../assets/project.png'
+import projectImg from '../../assets/project.png'
 import './nav.css'
 
 
@@ -37,8 +38,8 @@ function Navigation(){
                 </button>
 
                 <button className='nav-btn'> 
-                    <img src = {discImg} className = "btn-img"/>
-                    Discussion
+                    <a href="./discussion"><img src = {discImg} className = "btn-img"/>
+                    Discussion</a>
                 </button>
 
                 <button className='nav-btn'> 
@@ -48,8 +49,9 @@ function Navigation(){
                 </button>
 
                 <button className='nav-btn'> 
-                    <img src = {notesImg} className = "btn-img"/>
-                    Notes 
+                <a href="./notes" className='note' id='note'><img src = {notesImg} className = "btn-img"/>
+                    Notes </a>
+                    
                 </button>
 
             </div>

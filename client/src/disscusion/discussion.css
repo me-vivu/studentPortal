@@ -1,0 +1,63 @@
+.discussion-section {
+    width: 100%;
+    display: flex;
+    
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+.send{
+    width: 30%;
+}
+
+
+  .chat-container {
+    height: 450px; /* Fixed height */
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  }
+.others{
+    width: 60%;
+}
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .message img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  textarea {
+    width: 70%;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"] {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
