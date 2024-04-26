@@ -43,3 +43,7 @@ margin-top: 5px;
 #submit_button:hover {
 background-color: #45a049;
 }
+
+.project-item h3{
+    font-weight: 900;
+}

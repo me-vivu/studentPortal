@@ -4,16 +4,14 @@ import careerImg from '../../assets/career.png'
 import discImg from '../../assets/discussion.png'
 import notesImg from '../../assets/notes.png'
 import profileImg from '../../assets/profile.png'
+import projectImg from '../../assets/project.png'
 import './nav.css'
 
 
 
 
+
 function Navigation(){
-
-
-
-
 
     return(
         <div className='navigation-cnt'>
@@ -28,12 +26,14 @@ function Navigation(){
                 
                 <button className='nav-btn'> 
                     <img src = {homeImg} className = "btn-img"/>
-                    Home 
+                    <a href="/home-page">Home</a>
+                     
                 </button>
 
                 <button className='nav-btn'> 
+                    
                     <img src = {careerImg} className = "btn-img"/>
-                    Career 
+                    <a href="/career">Career</a>
                 </button>
 
                 <button className='nav-btn'> 
@@ -43,7 +43,8 @@ function Navigation(){
 
                 <button className='nav-btn'> 
                     <img src = {projectImg} className = "btn-img"/>
-                    Projects
+                    
+                    <a href="/project-view">Projects</a>
                 </button>
 
                 <button className='nav-btn'> 

@@ -1,28 +1,68 @@
-import React from 'react'
-import './career.css'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-function Career(){
-    return (
-        <div className="container">
-            <h2>Careers </h2>
-            <form method="POST">
+const BlogForm = () => {
+  // State variables to store form data
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [link, setLink] = useState('');
 
-                <label htmlFor="title">Title:</label>
-                <input type="text" id="title" className="title" required/>
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-                <label htmlFor="description">Description:</label>
-                <textarea id="description" className="description" rows="4" required></textarea>
+    try {
+      // Send a POST request to the backend server
+      const response = await axios.post('http://localhost:5001/blogs', {
+        title,
+        description,
+        link
+      });
 
-                <label htmlFor="author_name">author_name</label>
-                <input type="text" id="author_name" className="author_name" required/>
+      console.log(response.data); // Log the response from the server
+      // Clear the form fields after successful submission
+      setTitle('');
+      setDescription('');
+      setLink('');
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-                <label htmlFor="file">File: (Paste the GitHub Link)</label>
-                <input type="text" id="file" className="file" required/>
-
-                <button type="submit" id= "submit_button">Submit</button>
-            </form>
+  return (
+    <div>
+      <h2>Create a New Blog Post</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Title:</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
         </div>
-    )
-}
+        <div>
+          <label>Description:</label>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label>Link:</label>
+          <input
+            type="text"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
 
-export default Career;
+export default BlogForm;

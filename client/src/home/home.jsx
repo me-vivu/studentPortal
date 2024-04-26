@@ -13,18 +13,10 @@ function Home() {
            <div className='nav'>
             <Navigation/>
            </div>
-            
-
-            
-            
-
-            {/* Home page is built from here */}
 
             <div className='post-display'>
                 <ShareNow/>
                 <PostTemp/>
-                
-                               
              
             </div>
             
