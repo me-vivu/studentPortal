@@ -13,6 +13,7 @@ import Career from './career/career-page.jsx'
 import CareerForm from './career/career.jsx';
 import Post from "./post/post.jsx"
 import Notes from './notes/notes.jsx'
+import Discussion from "./disscusion/discussion.jsx"
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
         <Route path='/career' element={<Career/>}></Route>
         <Route path='/project-view' element={<ProjectPage/>}></Route>
         <Route path='/addCareer' element={<CareerForm/>}></Route>
+        <Route path='/notes' element={<Notes/>}></Route>
+        <Route path='/discussion' element={<Discussion/>}></Route>
+        
         
 
       </Routes>
