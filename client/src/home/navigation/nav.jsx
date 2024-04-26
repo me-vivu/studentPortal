@@ -4,14 +4,15 @@ import careerImg from '../../assets/career.png'
 import discImg from '../../assets/discussion.png'
 import notesImg from '../../assets/notes.png'
 import profileImg from '../../assets/profile.png'
-import projectImg from '../../assets/project.png'
 import './nav.css'
+
+
 
 
 function Navigation(){
 
 
-    
+
 
 
     return(

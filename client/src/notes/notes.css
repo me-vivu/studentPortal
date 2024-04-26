@@ -1,0 +1,66 @@
+
+
+.container{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(203, 30, 30);
+    
+}
+.branch{
+    width: 500px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(184, 17, 17);
+}
+.note{
+    width: 500px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(55, 212, 139);
+    
+}   
+
+.subjects{
+    display: grid;
+}
+.firstyear{
+    padding-top: 20px;
+}
+.PhysicsCycle{
+    padding: 10px;
+}
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+}
+.item {
+    text-align: center;
+    background-color: rgba(234, 165, 165, 0.4);
+    height:120%;
+    border: 2px solid #000;
+    padding-left:5%;
+    padding-right:5%;
+    width: 120%;
+    border-radius: 10px;
+
+}
+.item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.item p {
+    margin: 5px 0;
+}
+
