@@ -7,9 +7,23 @@ const ProjectModel = require('./models/ProjectSchema')
 const CareerModel = require('./models/careerSchema')
 const PostModel = require('./models/postSchema')
 const Token = require('./models/token')
-const crypto = require("crypto")
-const verify = require('./utils')
+
+
+require("dotenv").config();
+
+const PostRouter = require("./api/post");
+const UserRouter = require("./api/userName");
 const notes=require('./api/notes')
+const projectRouter = require('./api/project');
+const careerRouter = require('./api/career');
+
+const verify = require('./utils')
+
+const crypto = require("crypto");
+
+const { google } = require('googleapis');
+const Multer = require('multer');
+const fs = require('fs');
 
 require("dotenv").config();
 
@@ -21,7 +35,9 @@ app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URL)
 
-app.use(notes)
+app.use(notes);
+app.use(projectRouter);
+app.use(careerRouter);
 
 
 app.get('/get-data/:branch/:semester', async (req, res) => {

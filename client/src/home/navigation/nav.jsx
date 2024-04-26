@@ -10,11 +10,8 @@ import './nav.css'
 
 
 
+
 function Navigation(){
-
-
-
-
 
     return(
         <div className='navigation-cnt'>
@@ -28,14 +25,15 @@ function Navigation(){
             <div className = "divContainer">
                 
                 <button className='nav-btn'> 
-                <a href="./home-page"><img src = {homeImg} className = "btn-img"/>
-                    Home </a>
-                    
+                    <img src = {homeImg} className = "btn-img"/>
+                    <a href="/home-page">Home</a>
+                     
                 </button>
 
                 <button className='nav-btn'> 
-                    <a href="./careerpage"><img src = {careerImg} className = "btn-img"/>
-                    Career </a>
+                    
+                    <img src = {careerImg} className = "btn-img"/>
+                    <a href="/career">Career</a>
                 </button>
 
                 <button className='nav-btn'> 
@@ -45,7 +43,8 @@ function Navigation(){
 
                 <button className='nav-btn'> 
                     <img src = {projectImg} className = "btn-img"/>
-                    Projects
+                    
+                    <a href="/project-view">Projects</a>
                 </button>
 
                 <button className='nav-btn'> 

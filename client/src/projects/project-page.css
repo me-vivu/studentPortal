@@ -1,6 +1,7 @@
 .project-view{
     display: flex;
     flex-direction: row;
+    width: 100%;
     
 }
 
@@ -9,4 +10,66 @@
     flex-direction: column;
     flex: 4;
     padding: 20;
+}
+
+
+.image-view-project{
+    width: 100%;
+    
+    
+}
+
+.img-fluid{
+    border-radius: 8px;
+}
+
+.align-center {
+    margin: 0 auto; /* This sets the left and right margins to auto, which centers the element */
+    text-align: center; /* This centers the content inside the div if needed */
+}
+
+.singleblog-section{
+    margin-bottom: 10px;
+}
+
+
+.project-view-disp{
+    width: 80vw;
+    height: 50vh;
+    object-fit: cover;
+    
+
+}
+
+.project-view-second{
+    width:40vw;
+}
+
+.project-list {
+    margin: 20px;
+    width: 100%;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+.project-item p {
+    margin: 10px 0;
+}
+
+.project-item a {
+    color: blue;
 }

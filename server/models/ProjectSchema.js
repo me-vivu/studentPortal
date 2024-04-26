@@ -6,8 +6,7 @@ const ProjectSchema=new mongoose.Schema({
     title :{type:String ,required:true},
     description:{type :String, required:true},
     domain: {type: String, required: true},
-    report: {data: Buffer, contentType: String},
-    file :{data: Buffer, contentType: String}, 
+    file : String,
     upload_date : { type : Date, default: Date.now }
 });
 
