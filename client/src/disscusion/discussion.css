@@ -43,7 +43,7 @@
     box-sizing: border-box;
   }
   
-  input[type="text"] {
+  .chat-container input[type="text"] {
     width: 25%;
     padding: 10px;
     box-sizing: border-box;

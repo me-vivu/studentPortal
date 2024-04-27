@@ -62,6 +62,14 @@
 }
 a {
     text-decoration: none;
+
+}
+.item a{
+    color: black ;
+}
+
+.item2 a{
+    color: black ;
 }
 .item {
     text-align: center;
