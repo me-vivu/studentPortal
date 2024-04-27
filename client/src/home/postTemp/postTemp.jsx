@@ -3,15 +3,21 @@ import axios from 'axios';
 import profileImg from '../../assets/img.jpg'
 import hamImg from "../../assets/dots.png"
 import like from "../../assets/like.png";
+import love from "../../assets/love.png";
 import comment from "../../assets/comment.png"
 import car from "../../assets/car01.jpg"
 import './postTemp.css'
 
 function PostTemp({ post }) {
     const [showComments, setShowComments] = useState(false);
+    const [liked, setLike] = useState(false);
 
     const handleCommentClick = () => {
         setShowComments(!showComments);
+    };
+
+    const handleLike = () => {
+        setLike(!liked);
     };
 
     return (
@@ -40,10 +46,27 @@ function PostTemp({ post }) {
             </div>
             <div className="action-btns">
                 <button id="like-btn" className="like-btn">
-                    <img src={like} alt="like" className="like-btn-img" />
-                    Like
+                    {liked ?(
+                        <div>
+                            <img src={love} alt="like" className="like-btn-img" onClick={handleLike}/>
+                            Like
+                        </div>
+                        
+                        
+                        
+                    ):(
+                        <div>
+                            <img src={like} alt="like" className="like-btn-img" onClick={handleLike}/>
+                            Like
+
+                        </div>
+                        
+                    )}
+                    
+                    
                 </button>
                 <button id="cmnt-btn" className="like-btn" onClick={handleCommentClick}>
+
                     <img src={comment} alt="Comment" className="like-btn-img" />
                     Comment
                 </button>
