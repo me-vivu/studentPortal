@@ -150,7 +150,7 @@ app.use(UserRouter);
 
 const multer = Multer({
     storage: Multer.diskStorage({
-      destination: function (req, file, callback) {
+    destination: function (req, file, callback) {
         
         let destinationFolder;
         
@@ -163,7 +163,7 @@ const multer = Multer({
         callback(null, `${__dirname}/${destinationFolder}`);
       },
       filename: function (req, file, callback) {
-        callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+        callback(null, file.fieldname + "" + Date.now() + "" + file.originalname);
       },
     }),
     limits: {

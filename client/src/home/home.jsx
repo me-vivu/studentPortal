@@ -24,12 +24,12 @@ function Home() {
             <div className='others-display'>
                 <h5 className="text">Discussion Panel</h5>
                 <Forums/>
-                <button className='disc-btn'>Add Your Query</button>
+                <button className='disc-btn'>Read More Query</button>
 
                 <div className='upload-sec'>
                     <h5 className="text">Recent Notes</h5>
                     <Forums/>
-                    <button className='disc-btn' >Upload Notes</button>
+                    <button className='disc-btn' >Read More Notes</button>
                 </div>
             </div>
         </div>
