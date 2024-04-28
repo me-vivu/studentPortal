@@ -1,6 +1,7 @@
 import React from 'react'
 import{ useState } from 'react'
 import axios from 'axios'
+import img from "./assets/book-img.jpeg"
 import { useNavigate } from 'react-router-dom'
 import './login.css'
 
@@ -27,6 +28,7 @@ function Login(){
 
     return(
         <div className='login-main'>
+               
             <div className="login-container">
                 <h2>Login✌️</h2>
                 <form onSubmit={handleSubmit}>
@@ -42,6 +44,7 @@ function Login(){
                     <button type="submit">Login</button>
                 </form>
             </div>
+            <img src={img} className='login-img'></img>
         </div>
     )
 

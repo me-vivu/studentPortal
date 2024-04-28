@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import background from "./assets/background.jpg"
 import './signup.css'
 
 
@@ -27,6 +28,7 @@ function Signup() {
 
     return(
         <div className="signup-main">
+            <img src={background} className="signup-img"/>
             <div className="register-container">
                 <h2>Register</h2>
 
